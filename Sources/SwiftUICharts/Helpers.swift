@@ -54,6 +54,8 @@ public struct GradientColors {
     public static let prplPink = GradientColor(start: Color(hexString: "BC05AF"), end: Color(hexString: "FF1378"))
     public static let prplNeon = GradientColor(start: Color(hexString: "FE019A"), end: Color(hexString: "FE0BF4"))
     public static let orngPink = GradientColor(start: Color(hexString: "FF8E2D"), end: Color(hexString: "FF4E7A"))
+    public static let lightBlue = GradientColor(start: Color(hexString: "007AFF").opacity(0.5), end: Color(hexString: "007AFF").opacity(0.5))
+    public static let darkBlue = GradientColor(start: Color(hexString: "007AFF"), end: Color(hexString: "007AFF"))
 }
 
 public struct Styles {

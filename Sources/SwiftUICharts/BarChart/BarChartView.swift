@@ -69,11 +69,8 @@ public struct BarChartView : View {
                             .transition(.opacity)
                             .animation(.easeOut)
                     }
-                    Spacer()
-                    self.cornerImage
-                        .imageScale(.large)
-                        .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.legendTextColor : self.style.legendTextColor)
-                }.padding()
+                }
+                .padding(.horizontal, 10)
                 BarChartRow(data: data.points.map{$0.1},
                             accentColor: self.colorScheme == .dark ? self.darkModeStyle.accentColor : self.style.accentColor,
                             gradient: self.colorScheme == .dark ? self.darkModeStyle.gradientColor : self.style.gradientColor,
@@ -95,22 +92,15 @@ public struct BarChartView : View {
                 maxWidth: self.isFullWidth ? .infinity : self.formSize.width,
                 minHeight:self.formSize.height,
                 maxHeight:self.formSize.height)
-            .gesture(DragGesture()
-                .onChanged({ value in
+        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                  .onChanged { value in
                     self.touchLocation = value.location.x/self.formSize.width
                     self.showValue = true
                     self.currentValue = self.getCurrentValue()?.1 ?? 0
                     if(self.data.valuesGiven && self.formSize == ChartForm.medium) {
                         self.showLabelValue = true
                     }
-                })
-                .onEnded({ value in
-                    self.showValue = false
-                    self.showLabelValue = false
-                    self.touchLocation = -1
-                })
-        )
-            .gesture(TapGesture()
+                  }
         )
     }
     
