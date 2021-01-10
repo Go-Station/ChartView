@@ -28,6 +28,7 @@ public struct Colors {
     public static let GradientLowerBlue:Color = Color(hexString: "#F1F9FF")
     public static let DarkPurple:Color = Color(hexString: "#1B205E")
     public static let BorderBlue:Color = Color(hexString: "#4EBCFF")
+    public static let GreenColor:Color = Color(hexString: "5ABA47")
 }
 
 public struct GradientColor {
@@ -79,7 +80,7 @@ public struct Styles {
         backgroundColor: Color.clear,
         accentColor: Colors.OrangeStart,
         secondGradientColor: Colors.OrangeEnd,
-        textColor: Color.white,
+        textColor: Colors.GreenColor,
         legendTextColor: Color.gray,
         dropShadowColor: Color.gray)
     
