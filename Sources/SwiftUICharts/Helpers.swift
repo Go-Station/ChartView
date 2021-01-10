@@ -76,7 +76,7 @@ public struct Styles {
         dropShadowColor: Color.gray)
     
     public static let barChartStyleOrangeDark = ChartStyle(
-        backgroundColor: Color.black,
+        backgroundColor: Color.clear,
         accentColor: Colors.OrangeStart,
         secondGradientColor: Colors.OrangeEnd,
         textColor: Color.white,
@@ -92,7 +92,7 @@ public struct Styles {
         dropShadowColor: Color.gray)
     
     public static let barChartStyleNeonBlueDark = ChartStyle(
-        backgroundColor: Color.black,
+        backgroundColor: Color.clear,
         accentColor: Colors.GradientNeonBlue,
         secondGradientColor: Colors.GradientPurple,
         textColor: Color.white,
@@ -176,7 +176,7 @@ public class ChartStyle {
     }
     
     public init(formSize: CGSize){
-        self.backgroundColor = Color.white
+        self.backgroundColor = Color.clear
         self.accentColor = Colors.OrangeStart
         self.gradientColor = GradientColors.orange
         self.legendTextColor = Color.gray
