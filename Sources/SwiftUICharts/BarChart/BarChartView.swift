@@ -70,7 +70,7 @@ public struct BarChartView : View {
                             .animation(.easeOut)
                     }
                 }
-                .padding(.horizontal, 10)
+               // .padding(.horizontal, 10)
                 BarChartRow(data: data.points.map{$0.1},
                             accentColor: self.colorScheme == .dark ? self.darkModeStyle.accentColor : self.style.accentColor,
                             gradient: self.colorScheme == .dark ? self.darkModeStyle.gradientColor : self.style.gradientColor,
